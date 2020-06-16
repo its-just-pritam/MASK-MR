@@ -1,41 +1,87 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>MASK Manga Reader</title>
-  <link rel="shortcut icon" type="image/x-icon" href="pp.jpg">
-  <link href="https://fonts.googleapis.com/css?family=Caesar+Dressing|Open+Sans+Condensed:300" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+<html lang="en">
 
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
-<header class="head0--active">
-  <h1>MANGA  AND  ANIME  SOCIETY  KHARGPUR</h1>
-</header>
+  <header class="head0--active">
+    <h1>MANGA AND ANIME SOCIETY KHARAGPUR</h1>
+  </header>
 
-<main class="view0--active">
-  <div class="modal">
-    <div class="nav default-color">
-      <div class="next nav-icon"><svg fill="#ececec" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg></div>
-      <div class="prev nav-icon"><svg fill="#ececec" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/><path d="M0-.5h24v24H0z" fill="none"/></svg></div>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img class="panels" src="./0.png"></div>
+      <div class="swiper-slide"><img class="panels" src="./2.png"></div>
+      <div class="swiper-slide"><img class="panels" src="./8.png"></div>
+      <div class="swiper-slide"><img class="panels" src="./15.png"></div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+      <div class="swiper-slide">Slide 10</div>
     </div>
-    <div class="modal__body">
-      <!--<div class="circ">
-        <div class="circ3 default-color"></div>
-        <div class="circ2"></div>
-        <div class="circ1 default-color"></div>
-      </div>-->
-      <div class="content">
-        <div class="tt">
-          <h1 class="content__title"></h1>
-          <img class="content__img" width="900px"></img>
-        </div>
-      </div>
-      </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
-</main>
 
-  <script  src="./script.js"></script>
+  <footer class="foot0--active">
+  </footer>
 
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script type="text/javascript" src="jquery-3.4.1.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      keyboard: {
+        enabled: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        }
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    $(".swiper-button-next").mouseover(function(){
+  		$(".panels").css({"box-shadow": "8px 0px 10px 1px rgba(0, 0, 0, 0.6)"});
+	});
+
+	$(".swiper-button-next").mouseleave(function(){
+  		$(".panels").css({"box-shadow": "none"});
+	});
+
+	 $(".swiper-button-prev").mouseover(function(){
+  		$(".panels").css({"box-shadow": "-8px 0px 10px 1px rgba(0, 0, 0, 0.6)"});
+	});
+
+	$(".swiper-button-prev").mouseleave(function(){
+  		$(".panels").css({"box-shadow": "none"});
+	});
+
+  </script>
 </body>
+
 </html>
