@@ -3,32 +3,39 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Swiper demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title>Manga Reader</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3, user-scalable=yes">
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-  <header class="head0--active">
+  <header>
     <h1>MANGA AND ANIME SOCIETY KHARAGPUR</h1>
   </header>
 
   <!-- Swiper -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img class="panels" src="./0.png"></div>
-      <div class="swiper-slide"><img class="panels" src="./2.png"></div>
-      <div class="swiper-slide"><img class="panels" src="./8.png"></div>
-      <div class="swiper-slide"><img class="panels" src="./15.png"></div>
+      <div class="swiper-slide"><img src="./0.png" class="panels"></div>
+      <div class="swiper-slide"><img src="./2.png" class="panels"></div>
+      <div class="swiper-slide"><img src="./8.png" class="panels"></div>
+      <div class="swiper-slide"><img src="./15.png" class="panels"></div>
       <div class="swiper-slide">Slide 5</div>
       <div class="swiper-slide">Slide 6</div>
       <div class="swiper-slide">Slide 7</div>
       <div class="swiper-slide">Slide 8</div>
       <div class="swiper-slide">Slide 9</div>
       <div class="swiper-slide">Slide 10</div>
+      <div class="swiper-slide">Slide 11</div>
+      <div class="swiper-slide">Slide 12</div>
+      <div class="swiper-slide">Slide 13</div>
+      <div class="swiper-slide">Slide 14</div>
+      <div class="swiper-slide">Slide 15</div>
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
@@ -37,51 +44,40 @@
     <div class="swiper-button-prev"></div>
   </div>
 
-  <footer class="foot0--active">
+  <footer>
+
+    <div class="footer-col">
+      <a href="https://www.maskiitkgp.co/" target="_blank"><img src="./pp.jpg" class="footer-logo"></a>
+    </div>
+    <div class="footer-col">
+      <h3>Check out the official website of Manga and Anime Society Kharagpur (MASK) - A group of Anime and Manga enthusiasts.</h3>
+      <h3>Stay upadted with our new AMV's, Fan Arts and Manga.</h3>
+    </div>
+    <div class="footer-col">
+      <h2>Follow Us</h2>
+      <hr width="70%">
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/maskiitkgp" target="_blank"><i class="fa fa-facebook-official"></i></a>
+        <a href="https://www.youtube.com/channel/UCVYGmPrKHFPKKzO0lb-XM_Q/featured" target="_blank"><i class="fa fa-youtube"></i></a>
+        <a href="https://www.instagram.com/maskiitkgp/" target="_blank"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h2>Webpage Credits</h2>
+      <hr width="70%">
+      <a href="https://www.facebook.com/samk1003" target="_blank"><p class="footer-credits">Samir Kumar</p></a>
+      <a href="https://www.facebook.com/pritam.mallick.1401" target="_blank"><p class="footer-credits">Pritam Mallick</p></a>
+      <a href="https://www.facebook.com/divyanshishusingh" target="_blank"><p class="footer-credits">Divyansh Singh</p></a>
+    </div>
+
   </footer>
 
+  <script type="text/javascript" src="jquery-3.4.1.js"></script>
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-  <script type="text/javascript" src="jquery-3.4.1.js"></script>
-
   <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      keyboard: {
-        enabled: true,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + '</span>';
-        }
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
+  <script src="./index.js"></script>
 
-    $(".swiper-button-next").mouseover(function(){
-  		$(".panels").css({"box-shadow": "8px 0px 10px 1px rgba(0, 0, 0, 0.6)"});
-	});
-
-	$(".swiper-button-next").mouseleave(function(){
-  		$(".panels").css({"box-shadow": "none"});
-	});
-
-	 $(".swiper-button-prev").mouseover(function(){
-  		$(".panels").css({"box-shadow": "-8px 0px 10px 1px rgba(0, 0, 0, 0.6)"});
-	});
-
-	$(".swiper-button-prev").mouseleave(function(){
-  		$(".panels").css({"box-shadow": "none"});
-	});
-
-  </script>
 </body>
 
 </html>
