@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Nunito&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
 html, body {
   position: relative;
   height: 100%;
 }
+
 body {
   background: #FFE1E6;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -13,19 +15,14 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-}
-header{
-  padding-top: 15px;
-  background-color: #F12749;
-  padding-bottom: 15px;
+  min-height: 100%;
 }
 
-footer{
-  margin-top: 50px;
-  padding-top: 15px;
+header{
+  padding-top: 30px;
   background-color: #F12749;
   padding-bottom: 15px;
-  height: 100px;
+  flex: auto;
 }
 
 header h1{
@@ -37,15 +34,19 @@ header h1{
   color: white;
   opacity: 0.9;
 }
+
 .swiper-container {
   width: 1200px;
   height: 800px;
   margin: auto;
+  flex: auto;
 }
+
 .swiper-wrapper {
   height: 100%;
   margin: auto;
 }
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -53,6 +54,7 @@ header h1{
   margin: auto;
   height: 80%;
   box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.6);
+
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,20 +78,15 @@ header h1{
 
 /* custmm bullets style */
 .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   text-align: center;
-  line-height: 20px;
-  font-size: 12px;
+  line-height: 25px;
+  font-size: 15px;
   color:#fff;
   opacity: 1;
   background: rgba(0,0,0,0.3);
   transition: 0.5s all ease;
-}
-
-.swiper-pagination-bullet:hover{
-  background: #FFE1E6;
-  color: #1B0B4A;
 }
 
 .swiper-pagination-bullet-active {
@@ -117,13 +114,136 @@ header h1{
   transition: 0.5s all ease;
 }
 
-.swiper-button-next:hover{
-  background-color: #292727;
-  color: #41FD69;
-
+footer{
+  margin-top: 50px;
+  padding-top: 15px;
+  background-color: #F12749;
+  padding-bottom: 15px;
 }
 
-.swiper-button-prev:hover{
-  background-color: #292727;
+.footer-col {
+  float: left;
+  width: 24%;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Muli', sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 0 0 50px rgba(198,28,39,0.9), 0 0 0 blue;
+  color: white;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  margin-top: 15px;
+  width: 180px;
+  transition: 0.5s all ease;
+}
+
+.footer-logo:hover{
+  opacity: 0.75;
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.6);
+}
+
+.footer-icons{
+  margin-top: 20px;
+  flex-direction: row;
+  font-size: 45px;
+  letter-spacing: 10px;
+}
+
+.footer-icons i{
+  transition: 0.5s all ease;
+  color: white;
+}
+
+.footer-icons i:hover{
+  color: #333333;
+}
+
+.footer-credits{
+  margin-top: 0;
+  font-size: 18px;
+  color: white;
+  transition: 0.5s all ease;
+}
+
+.footer-credits:hover{
   color: #41FD69;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* Clear floats after the columns */
+footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (min-width: 800px) {
+  .swiper-button-next:hover, .swiper-button-prev:hover{
+    background-color: #292727;
+    color: #41FD69;
+  }
+  .swiper-pagination-bullet:hover{
+    background: #FFE1E6;
+    color: #1B0B4A;
+  }  
+}
+
+@media screen and (max-width: 800px) {
+  header h1{
+    font-size: 22px;
+  }
+  .panels {
+    width: 350px;
+  }
+  .swiper-container{
+    width: 100%;
+    height: 430px;
+  }
+  .swiper-wrapper{
+    height: 400px;
+  }
+  .swiper-button-next,.swiper-button-prev{
+    top: 325px;
+    height: 50px;
+  }
+  .swiper-button-next:after,.swiper-button-prev::after{
+    font-size: 20px;
+  }
+  .swiper-button-next:active{
+    background-color: #292727;
+    color: #41FD69;
+  }
+  .swiper-button-prev:active{
+    background-color: #292727;
+    color: #41FD69;
+  }
+  footer{
+    margin-top: 40px;
+  }
+  .footer-col{
+    margin-top: 20px;
+    width: 100%;
+    font-size: 10px;
+    float: none;
+  }
+  .footer-col h3{
+    margin: 20px 50px 10px 50px;
+  }
+  .footer-icons{
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 600px){
+  .panels{
+    width: 80%;
+  }
 }
